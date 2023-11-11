@@ -1,0 +1,44 @@
+{
+    "Expression::Expression": {
+        "Operations::Expression/Operation": [
+            "Addition::Expression/Operation/Addition",
+            "Subtraction::Expression/Operation/Subtraction",
+            "Multiplication::Expression/Operation/Multiplication",
+            "Division::Expression/Operation/Division",
+            "Literals::Expression/Operation/Literals",
+            "Trigonometrics::Expression/Operation/Trigonometrics"
+        ],
+        "Substitution": [
+            "Variable Substitution",
+            "Determinstic Substitution",
+            "Finite & Infinite Values Substituon"
+        ],
+        "Equation": [
+            "Linear Equation",
+            "Dissolve",
+            "Solve",
+            "Polyminonial Equation "
+        ]
+    },
+    "Substitution": [
+        "Variable Substitution",
+        "Determinstic Substitution",
+        "Finite & Infinite Values Substituon"
+    ],
+    "Equation": [
+        "Linear Equation",
+        "Dissolve",
+        "Solve",
+        "Polyminonial Equation "
+    ],
+    "Matix": [
+        "Addition",
+        "Subtraction",
+        "Mutiplication"
+    ],
+    "Algbera": [
+        "Addition",
+        "Subtraction",
+        "Mutiplication"
+    ]
+}

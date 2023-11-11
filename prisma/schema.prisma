@@ -1,0 +1,158 @@
+datasource db {
+    provider = "postgresql"
+    url      = env("POSTGRES_URL")
+}
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+model DataTargets {
+    id        Int      @id @default(autoincrement())
+    user      String
+    Target    String[]
+    createdAt DateTime @default(now())
+}
+
+enum DataComponent {
+    Expr
+    Matrix
+    Vector
+    AI
+}
+
+model commit {
+    id          String   @id @default(cuid())
+    userId      String
+    comment     String
+    repo        String
+    DateCreated DateTime @default(now())
+}
+
+model DeployLogs {
+    id     Int    @id @default(autoincrement())
+    userID String
+}
+
+model Profile {
+    id           String      @id
+    gender       Gender      @default(MALE)
+    role         Role        @default(SU)
+    password     String      @unique
+    mobile       String      @unique
+    email        String      @unique
+    userId       String      @unique
+    user         User        @relation(fields: [userId], references: [id])
+    continent    String
+    firstName    String
+    lastName     String
+    username     String
+    Referal      Referal[]
+    experienceId String?
+    Exprience    Exprience?
+    exprienceId  String?
+    Expriences   Expriences?
+    DateCreated  DateTime    @default(now())
+    posts        Post[]
+}
+
+model User {
+    id          String   @id @default(cuid())
+    profile     Profile?
+    DateCreated DateTime @default(now())
+    Post        Post[]
+}
+
+model Documentation {
+    id     Int     @id @default(autoincrement())
+    title  String
+    // Other documentation fields
+    topics Topic[]
+    // Add more relationships as needed
+}
+
+model Topic {
+    id              Int           @id @default(autoincrement())
+    title           String
+    // Other topic fields
+    documentation   Documentation @relation(fields: [documentationId], references: [id])
+    documentationId Int
+    posts           Trend[]
+    Post            Post[]
+}
+
+model Trend {
+    id      Int      @id @default(autoincrement())
+    trend   String[]
+    Topic   Topic?   @relation(fields: [topicId], references: [id])
+    topicId Int?
+    post    Post[]
+}
+
+model Post {
+    id      Int    @id @default(autoincrement())
+    title   String
+    content String
+
+    authorId  Int
+    topic     Topic    @relation(fields: [topicId], references: [id])
+    topicId   Int
+    Profile   Profile? @relation(fields: [profileId], references: [id])
+    profileId String?
+    User      User?    @relation(fields: [userId], references: [id])
+    userId    String?
+    Trend     Trend?   @relation(fields: [trendId], references: [id])
+    trendId   Int?
+}
+
+enum Role {
+    SU
+    TP
+    ADMIN
+}
+
+enum Gender {
+    MALE
+    FEMALE
+    NON_BINARY
+    TRANSGENDER
+    GENDERQUEER
+}
+
+enum Lang {
+    PYTHON
+    JAVA
+    CS
+    CPp
+    JAVASCRIPT
+}
+
+model Referal {
+    id          String   @id
+    code        String   @unique
+    verified    Boolean  @default(false)
+    dateCreated DateTime @default(now())
+    expiry      DateTime
+    referId     String
+    RefralSet   Profile  @relation(fields: [referId], references: [id])
+}
+
+model Expriences {
+    id             String     @id
+    Lang           Lang       @default(PYTHON)
+    Year           Int        @default(2)
+    Profile        Profile?   @relation(fields: [profileId], references: [id])
+    profileId      String?    @unique
+    projects       String
+    userId         String
+    exprienceSetId String?
+    Exprience      Exprience? @relation(fields: [exprienceId], references: [id])
+    exprienceId    String?
+}
+
+model Exprience {
+    id           String       @id
+    experience   Expriences[]
+    experienceId String?      @unique
+    Profile      Profile?     @relation(fields: [experienceId], references: [id])
+}

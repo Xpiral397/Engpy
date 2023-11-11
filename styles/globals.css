@@ -1,0 +1,583 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+/*
+  Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them!
+*/
+
+.border_s {
+    border: gray 1px solid;
+
+
+
+}
+
+.c_p {
+    background-color: #f5f5f7;
+}
+
+.c_p_1 {
+    background-color: rgb(255, 255, 254);
+}
+
+.slide {
+    animation: SlideIn 3s;
+    transition: 5s;
+}
+
+@keyframes SlideIn {
+    0% {
+        transform: translateX(-100);
+        transition: 3s;
+    }
+
+    100% {
+        transform: translateX(0);
+        transition: 3s;
+    }
+}
+
+.resize {
+    resize: vertical;
+}
+
+
+.grids {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    overflow-x: scroll;
+
+    @media only screen and (max-width: 900px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        overflow-x: scroll;
+    }
+
+    @media only screen and (max-width: 630px) {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 80px;
+        overflow-x: scroll;
+    }
+
+    @media only screen and (min-width: 1800px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 200px;
+        overflow-x: scroll;
+        grid-row-gap: 20px;
+    }
+
+    ;
+
+}
+
+.mains {
+    width: 100%;
+    height: 100vh;
+    padding: 120px 24px 160px 24px;
+}
+
+.bd {
+    border-color: rgb(10, 2, 15);
+    border-bottom-width: .5px solid;
+}
+
+.crt {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-image: linear-gradient(#9955d4a0, #20209b, #df06df);
+}
+
+.animate {
+    animation: moveUp 1s;
+}
+
+.text_transition {
+    transition: opacity ease-in-out;
+}
+
+.shadow_down {
+    border-radius: 1%;
+    box-shadow: 0px .5px 0px 0px blue;
+}
+
+@keyframes moveButtomAnimationLeft {
+    from {
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    to {
+        margin-left: -40px;
+        margin-top: -50px;
+    }
+}
+
+@keyframes moveUp {
+    from {
+        margin-top: -100px;
+        opacity: 0;
+        transition: .51s;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.no_wrap {
+    white-space: nowrap;
+}
+
+.pos_fix {
+    position: fixed;
+}
+
+.hs {
+    overflow-y: scroll;
+    /* Set 'scroll' to enable the scrollbar */
+    scrollbar-width: thin;
+    /* Show a thin scrollbar (works in Firefox) */
+    -ms-overflow-style: none;
+    /* Hide the scrollbar in IE/Edge */
+}
+
+/* Hide the scrollbar thumb and track in WebKit-based browsers */
+.hs::-webkit-scrollbar {
+    width: 8px;
+    /* Set a smaller width for the scrollbar track (adjust as needed) */
+}
+
+.hs::-webkit-scrollbar-track-piece {
+    display: none;
+    background: transparent
+}
+
+.hs::-webkit-scrollbar-corner {
+    display: none;
+    background: transparent;
+}
+
+.hs::-webkit-scrollbar-thumb {
+    background-color: purple;
+    /* Hide the scrollbar thumb */
+    border-radius: 4px;
+    /* Set a border radius for the thumb */
+}
+
+
+
+.hs-s {
+    overflow-y: scroll;
+    /* Set 'scroll' to enable the scrollbar */
+    scrollbar-width: thin;
+    /* Show a thin scrollbar (works in Firefox) */
+    -ms-overflow-style: none;
+    /* Hide the scrollbar in IE/Edge */
+}
+
+/* Hide the scrollbar thumb and track in WebKit-based browsers */
+.hs-s::-webkit-scrollbar {
+    width: 5px;
+    /* Set a smaller width for the scrollbar track (adjust as needed) */
+}
+
+.hs-s::-webkit-scrollbar-track-piece {
+    display: block;
+    background: rgb(8, 5, 30)
+}
+
+.hs-s::-webkit-scrollbar-corner {
+    display: none;
+    background: transparent;
+}
+
+.hs-s::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    /* Hide the scrollbar thumb */
+    border-radius: 3px;
+    /* Set a border radius for the thumb */
+}
+
+.hs-s:hover::-webkit-scrollbar-thumb {
+    background-color: rgb(151, 151, 151);
+    /* Hide the scrollbar thumb */
+    border-radius: 4px;
+    /* Set a border radius for the thumb */
+}
+
+
+
+
+
+
+.hs-none::-webkit-scrollbar {
+    width: 5px;
+    /* Set a smaller width for the scrollbar track (adjust as needed) */
+}
+
+.hs-none::-webkit-scrollbar-track-piece {
+    display: none;
+    background: transparent
+}
+
+.hs-none::-webkit-scrollbar-corner {
+    display: none;
+    background: transparent;
+}
+
+.hs-none::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 255, 255);
+    /* Hide the scrollbar thumb */
+    border-radius: 4px;
+    /* Set a border radius for the thumb */
+}
+
+.hs-none::-webkit-scrollbar-track {
+    background-color: transparent;
+    /* Hide the scrollbar track */
+    border-radius: 4px;
+    /* Set a border radius for the track */
+}
+
+@keyframes moveButtonAnimationRght {
+    from {
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    to {
+        margin-right: -40px;
+        margin-top: -50px;
+    }
+}
+
+.opacity_1 {
+    opacity: 0.5;
+}
+
+@layer closure_select {
+    select {
+        @apply border-slate-300 border
+    }
+
+    input[type='text'],
+    input[type='number'],
+    input[type='password'] {
+        @apply pr-1 mr-5
+    }
+}
+
+.bend {
+    transform: skewY(-10deg), skewY(10deg);
+    -webkit-transform: skewY(-10deg), skewY(10deg);
+    -moz-transform: skewY(-10deg), skewY(10deg);
+    -ms-transform: skewY(-10deg), skewY(10deg);
+    -o-transform: skewY(-10deg), skewY(10deg);
+}
+
+.ben {
+    transform: skewX(0deg);
+}
+
+.bend2::after {
+    width: 300px;
+    height: 300px;
+    background: blue;
+    margin-right: 0;
+    transform: skewX(-100deg);
+    transform-origin: left center;
+    -webkit-transform: skewX(-100deg);
+    -moz-transform: skewX(-100deg);
+    -ms-transform: skewX(-100deg);
+    -o-transform: skewX(-100deg);
+}
+
+.animateShiftFromLeft {
+    color: #20209b, #9b2082, rgb(155, 124, 32), #f807d4, #ffcc00, #ffb217, #ec7c1a, #289b20, #be6323, #e518f0, #8b6398, #5e6abd;
+    animation: moveButtomAnimationLeft 10s infinite;
+    -webkit-animation: moveButtomAnimationLeft 10s infinite;
+}
+
+.line {
+    border-radius: 100%;
+    content: "";
+    width: 5px;
+    height: 100%;
+    /* background-color: brown; */
+    background-image: linear-gradient(#9955d4a0, #20209b, #df06df);
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+.txt_dec_none {
+    text-decoration: none;
+}
+
+.p_c {
+    color: rgb(7, 45, 37);
+    font-family: "Euclid Circular A",
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+}
+
+.b_g_s {
+    background-color: rgb(249, 251, 250)
+}
+
+.bg-slate {
+    background: rgb(250, 222, 223);
+    border: 1px solid orangered;
+    border-top: 1px sloid red;
+}
+
+.circleShape {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.roundeShape {
+    border-radius: 49% 51% 27% 73% / 100% 100% 0% 0%;
+    -webkit-border-radius: 49% 51% 27% 73% / 100% 100% 0% 0%;
+    -moz-border-radius: 49% 51% 27% 73% / 100% 100% 0% 0%;
+    -ms-border-radius: 49% 51% 27% 73% / 100% 100% 0% 0%;
+    -o-border-radius: 49% 51% 27% 73% / 100% 100% 0% 0%;
+}
+
+.katex {
+    font-family: 'YourCustomFont', sans-serif;
+    /* Replace 'YourCustomFont' with your desired font name */
+}
+
+
+/* styles.css */
+
+
+/* Increase the padding between rows */
+
+.katex .array {
+    padding: 5px;
+    /* Adjust the value as needed */
+}
+
+
+/* Increase the padding between columns */
+
+.katex .array>*>* {
+    padding-right: 10px;
+    /* Adjust the value as needed */
+}
+
+.b_blue {
+    color: #041375
+}
+
+@keyframes move {
+    to {
+        transition: 7s;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        -webkit-transition: 7s;
+        -moz-transition: 7s;
+        -ms-transition: 7s;
+        -o-transition: 7s;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin-slow {
+    animation: spin 4s linear infinite;
+}
+
+.circular-gradient {
+    background: radial-gradient(circle, rgb(243, 243, 245) 0%, rgb(245, 245, 247) 70%, rgb(255, 255, 255) 70%, rgb(255, 255, 255) 70%, rgb(255, 255, 255) 70%, rgb(255, 255, 255) 100%);
+    width: 100%;
+    height: 100%;
+
+}
+
+.main:before {
+    /* background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%); */
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 10%;
+    top: 0;
+}
+
+.main:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    top: 0;
+    opacity: 0.4;
+    filter: invert(1);
+}
+
+.gradient {
+    height: fit-content;
+    width: 100%;
+    max-width: 640px;
+    background-image: radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 1) 0px, transparent 0%), radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%), radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%), radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%), radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%), radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%), radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    filter: blur(100px) saturate(150%);
+    top: 80px;
+    opacity: 0.15;
+}
+
+@media screen and (max-width: 640px) {
+    .main {
+        padding: 0;
+    }
+}
+
+
+/* Tailwind Styles */
+
+
+/* .app {
+    @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto;
+}
+
+.black_btn {
+    @apply rounded-full border border-black bg-black py-1.5 px-5 text-white transition-all hover: bg-white hover: text-black text-center text-sm font-inter flex items-center justify-center;
+}
+
+.outline_btn {
+    @apply rounded-full border border-black bg-transparent py-1.5 px-5 text-black transition-all hover: bg-black hover: text-white text-center text-sm font-inter flex items-center justify-center;
+}
+
+.head_text {
+    @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm: text-6xl;
+}
+
+.orange_gradient {
+    @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;
+}
+
+.green_gradient {
+    @apply bg-gradient-to-r from-green-400 to-green-500 bg-clip-text text-transparent;
+}
+
+.blue_gradient {
+    @apply bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;
+}
+
+.desc {
+    @apply mt-5 text-lg text-gray-600 sm: text-xl max-w-2xl;
+}
+
+.search_input {
+    @apply block w-full rounded-md border border-gray-200 bg-white py-2.5 font-satoshi pl-5 pr-12 text-sm shadow-lg font-medium focus: border-black focus: outline-none focus: ring-0;
+}
+
+.copy_btn {
+    @apply w-7 h-7 rounded-full bg-white/10 shadow-[inset_10px_-50px_94px_0_rgb(199,
+    199,
+    199,
+    0.2)] backdrop-blur flex justify-center items-center cursor-pointer;
+}
+
+.glassmorphism {
+    @apply rounded-xl border border-gray-200 bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199,
+    199,
+    199,
+    0.2)] backdrop-blur p-5;
+}
+
+.prompt_layout {
+    @apply space-y-6 py-8 sm: columns-2 sm: gap-6 xl: columns-3;
+}
+
+
+/* Feed Component */
+
+
+/*
+.feed {
+    @apply mt-16 mx-auto w-full max-w-xl flex justify-center items-center flex-col gap-2;
+}
+
+
+/* Form Component
+
+.form_textarea {
+    @apply w-full flex rounded-lg h-[200px] mt-2 p-3 text-sm text-gray-500 outline-0;
+}
+
+.form_input {
+    @apply w-full flex rounded-lg mt-2 p-3 text-sm text-gray-500 outline-0;
+}
+
+
+/* Nav Component
+
+.logo_text {
+    @apply max-sm: hidden font-satoshi font-semibold text-lg text-black tracking-wide;
+}
+
+.dropdown {
+    @apply absolute right-0 top-full mt-3 w-full p-5 rounded-lg bg-white min-w-[210px] flex flex-col gap-2 justify-end items-end;
+}
+
+.dropdown_link {
+    @apply text-sm font-inter text-gray-700 hover: text-gray-500 font-medium;
+}
+
+
+/* PromptCard Component
+
+.prompt_card {
+    @apply flex-1 break-inside-avoid rounded-lg border border-gray-300 bg-white/20 bg-clip-padding p-6 pb-4 backdrop-blur-lg backdrop-filter md: w-[360px] w-full h-fit;
+}
+
+.flex-center {
+    @apply flex justify-center items-center;
+}
+
+.flex-start {
+    @apply flex justify-start items-start;
+}
+
+.flex-end {
+    @apply flex justify-end items-center;
+}
+
+.flex-between {
+    @apply flex justify-between items-center;
+}
+
+*/
