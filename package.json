@@ -47,6 +47,7 @@
     "react-redux": "^8.1.2",
     "react-select": "^5.7.4",
     "redux": "^4.2.1",
+    "sass": "^1.69.5",
     "save-dev": "^0.0.1-security",
     "tailwindcss": "3.3.3",
     "typescript": "^5.2.2",

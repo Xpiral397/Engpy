@@ -1,10 +1,12 @@
-function textTransform(text: string) {
-    try {
-        return text.charAt(0) + text.slice(1).toLowerCase()
-    } catch(e) {
-        return text
+export function resolvePath(link: string) {
+    const rootDir = 'docs/content/'
+    let setFlags: boolean = false
+    if(link.includes(rootDir)) {
+        setFlags = true
     }
-}
-export {
-    textTransform
+    link = link.replace(window.location.href, "")
+    if(setFlags) {
+        link = rootDir + link
+    }
+    return link.replaceAll(' ', "").replaceAll('//', '/')
 }

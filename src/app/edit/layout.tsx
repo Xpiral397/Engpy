@@ -49,42 +49,43 @@ export default function Layout({
             <body className={inter.className}>
                 <div className='flex flex-row  '>
                     <Sidebar />
-                    <div><nav className='h-8 flex w-full text-center items-center text-slate-100 text-[12px]  border-slate-800 border-b-[.1px] border-zinc-900'>
-                        <ul className='w-full flex justify-between  items-center '>
-                            <ul className='flex items-center space-x-[.5px] border-r-[.1px] border-zinc-900'>
-                                <li>
-                                    <span className='text-slate-300 items-center flex text-[12px] space-x-4 px-3 py-2 '>Span: <h1>Addtion Template </h1> <ArrowDownIcon className='w-2 h-2' /></span>
-                                </li>
-                                <li>
-                                    <span className='text-slate-300 items-center flex text-[12px] space-x-4 px-3 py-2 '><span className='  bg-zinc-500 px-2 rounded-sm shadow-xl '>items:</span><h1>Addtion Template </h1> <ArrowDownIcon className='w-2 h-2' /></span>
-                                </li>
-                            </ul>
-                            <ul className='flex items-center space-x-[.5px] border-r-[.1px] border-zinc-900'>
-                                <li className='flex items-center space-x-5 border py-[.1px] border-zinc-700 border-[2px] px- rounded-md'>
-                                    <span className='text-slate-300 items-center flex text-[16px] space-x-4 px-3 py-2 '> <MdImportantDevices /> </span>
-                                    <span className='text-slate-300 items-center flex text-[16px] space-x-4 px-3 py-2 '> <PiDeviceMobileCamera /> </span>
-                                    <span className='text-slate-300 items-center flex text-[16px] space-x-4 px-3 py-2 '> <MdImportantDevices /> </span>
-                                    <span className='text-slate-300 items-center flex text-[16px] space-x-4 px-3 py-2 '> <MdImportantDevices /> </span>
-                                    <span className='text-slate-300 items-center flex text-[16px] space-x-4 px-3 py-2 '> <TbDeviceTabletFilled /> </span>
-                                </li>
-                                <li>
-                                    <span className='text-slate-300 items-center flex text-[12px] space-x-4 px-3 py-2 '><span className='  bg-zinc-700 px-2 rounded-sm shadow-xl '>989px </span><h1>Add New Device </h1> <ArrowDownIcon className='w-2 h-2' /></span>
-                                </li>
-                            </ul>
-                            <ul className='flex items-center space-x-[.5px] border-r-[.1px] border-zinc-900'>
-                                <li>
-                                    <span className='text-slate-300 items-center flex text-[12px] space-x-4 px-3 py-2 '>Span: <h1>Addtion Template </h1> <BiUndo /></span>
-                                </li>
-                                <li>
-                                    <span className='text-slate-300 items-center flex text-[12px] space-x-4 px-3 py-2 '>Span: <h1>Addtion Template </h1> <BiRedo /></span>
-                                </li>
-                                <li>
-                                    <span className='text-slate-300 items-center flex text-[12px] space-x-4 px-3 py-2 '><span className='  bg-zinc-500 px-2 rounded-sm shadow-xl '>Last Action:</span><h1>Addtion Template </h1> <ArrowDownIcon className='w-2 h-2' /></span>
-                                </li>
-                            </ul>
+                    <div>
+                        <nav className='h-8 flex w-full text-center items-center text-slate-100 text-[12px]  border-slate-800 border-b-[.1px] border-zinc-900'>
+                            <ul className='w-full flex justify-between  items-center '>
+                                <ul className='flex items-center space-x-[.5px] border-r-[.1px] border-zinc-900'>
+                                    <li>
+                                        <span className='text-slate-300 items-center flex text-[12px] space-x-4 px-3 py-2 '>Span: <h1>Addtion Template </h1> <ArrowDownIcon className='w-2 h-2' /></span>
+                                    </li>
+                                    <li>
+                                        <span className='text-slate-300 items-center flex text-[12px] space-x-4 px-3 py-2 '><span className='  bg-zinc-500 px-2 rounded-sm shadow-xl '>items:</span><h1>Addtion Template </h1> <ArrowDownIcon className='w-2 h-2' /></span>
+                                    </li>
+                                </ul>
+                                <ul className='flex items-center space-x-[.5px] border-r-[.1px] border-zinc-900'>
+                                    <li className='flex items-center space-x-5 border py-[.1px] border-zinc-700 border-[2px] px- rounded-md'>
+                                        <span className='text-slate-300 items-center flex text-[16px] space-x-4 px-3 py-2 '> <MdImportantDevices /> </span>
+                                        <span className='text-slate-300 items-center flex text-[16px] space-x-4 px-3 py-2 '> <PiDeviceMobileCamera /> </span>
+                                        <span className='text-slate-300 items-center flex text-[16px] space-x-4 px-3 py-2 '> <MdImportantDevices /> </span>
+                                        <span className='text-slate-300 items-center flex text-[16px] space-x-4 px-3 py-2 '> <MdImportantDevices /> </span>
+                                        <span className='text-slate-300 items-center flex text-[16px] space-x-4 px-3 py-2 '> <TbDeviceTabletFilled /> </span>
+                                    </li>
+                                    <li>
+                                        <span className='text-slate-300 items-center flex text-[12px] space-x-4 px-3 py-2 '><span className='  bg-zinc-700 px-2 rounded-sm shadow-xl '>989px </span><h1>Add New Device </h1> <ArrowDownIcon className='w-2 h-2' /></span>
+                                    </li>
+                                </ul>
+                                <ul className='flex items-center space-x-[.5px] border-r-[.1px] border-zinc-900'>
+                                    <li>
+                                        <span className='text-slate-300 items-center flex text-[12px] space-x-4 px-3 py-2 '>Span: <h1>Addtion Template </h1> <BiUndo /></span>
+                                    </li>
+                                    <li>
+                                        <span className='text-slate-300 items-center flex text-[12px] space-x-4 px-3 py-2 '>Span: <h1>Addtion Template </h1> <BiRedo /></span>
+                                    </li>
+                                    <li>
+                                        <span className='text-slate-300 items-center flex text-[12px] space-x-4 px-3 py-2 '><span className='  bg-zinc-500 px-2 rounded-sm shadow-xl '>Last Action:</span><h1>Addtion Template </h1> <ArrowDownIcon className='w-2 h-2' /></span>
+                                    </li>
+                                </ul>
 
-                        </ul>
-                    </nav>
+                            </ul>
+                        </nav>
                         <div>
                             {children}
                         </div>

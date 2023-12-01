@@ -6,6 +6,7 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -27,6 +28,7 @@ const config: Config = {
         '5': ' repeat(3, minmax(0, 1fr))',
         '6': ' repeat(4, minmax(0, 1fr))',
       },
+
       gridAutoRows: {
         'auto': 'auto'
       }

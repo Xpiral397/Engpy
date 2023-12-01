@@ -1,6 +1,6 @@
 'use client'
 import React, {Suspense, useEffect, useState} from 'react';
-import '@/styles/globals.css'
+import '@/styles/globals.scss'
 import Link from 'next/link'
 import Image from "next/image"
 import sec from "../public/asset/sec.png"

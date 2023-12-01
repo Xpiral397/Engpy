@@ -1,6 +1,6 @@
 "use client"
 import Image from 'next/image'
-import '@/styles/globals.css';
+import '@/styles/globals.scss';
 import ais from "@/public/asset/ais.jpg"
 import Learn from "@/public/asset/Learn.jpg"
 import engpyWelcome from "@/public/asset/engpyWelcome.jpg"
@@ -16,6 +16,7 @@ import {useEffect, useState} from 'react';
 import {animateOnScroll} from './components/Designs/animations/Scoll';
 import {CodeEditor} from './components/Editor/codeEditor';
 import Navbar from './components/Navs/Navbar'
+import {useSetting} from './docs/cache/settings';
 
 
 
@@ -24,7 +25,8 @@ export default function Home() {
   const gradientBackgroundStyle = {font: 'serif', groundImage: `url(${bassRound.src})`, background: 'linear-gradient(to right, #20209b, #df06df) '}
   let Tetx1 = "Mordern & Advance Engineering CAS.";
   const [text_1, setTetx_1] = useState("");
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(-1);
+  const {setting, setSettings} = useSetting()
   const Text = `from engpy import Expr,factorial
 
 def Macularin_Series(expression, function_plugin, t_order):
@@ -45,16 +47,17 @@ def Macularin_Series(expression, function_plugin, t_order):
   useEffect(() => {
     const interval = setInterval(() => {
       if(onwait && index < Tetx1.length) {
-        setTetx_1((prevText) => prevText + Tetx1[index]);
+        if(Tetx1[index] != undefined)
+          setTetx_1((prevText) => prevText + Tetx1[index]);
         setIndex((prevIndex) => prevIndex + 1);
       }
 
       if(index === Tetx1.length - 1) {
         setOnwait(false);
+        setTetx_1("")
         const timeout = setTimeout(() => {
           setOnwait(true);
-          setTetx_1("M");
-          setIndex(1);
+          setIndex(-1);
         }, 5000);
 
         return () => {
@@ -70,12 +73,13 @@ def Macularin_Series(expression, function_plugin, t_order):
 
   return (
 
-    <div className='bg-slate-900 block'>
+    <div className='bg-gradient-to-r from-slate-900 to-slate-900 dark:from-neutral-300 dark:via-purple-500 dark:to-purple-400 bg-no-repeat bg-center block'>
       <div>
         <Navbar />
       </div>
-      <div className="bg-slate-900">
-        <div className='mains bg-slate-800'>
+      <div className="  bg-gradient-to-r dark:from-slate-900 dark:via-slate-900 dark:to-slate-900 from-neutral-100 from-30% via-violet-200 via-purple-100 to-neutral-100 to-90% bg-no-repeat bg-center block">
+        <div className='relative mains'>
+          <div className='absolute bg-[radial-gradient(circle_at_butom_left, _var(-tw-gradient-stops))] dark:from-slate-900 dark:via-slate-900 dark:to-slate-900 from-neutral-100 from-30% via-purple-900 to-neutral-100 to-90% bg-no-repeat bg-center h-[100vh] w-full z-10'></div>
           <p className='text-[white] mt-[80px] text_transition font-bold sm:text-[50px] text-[30px]  bg-gradient-to-r from-amber-500 via-blue-600 to-yellow-500 bg-clip-text text-transparent text-center'>{text_1}<span className='text-[30px] text-center sm:text-[60px]  bg-gradient-to-r from-blue-500 via-purple-600 to-yellow-500 bg-clip-text text-transparent text-center'>
             <p>Python Advance Computer Algebra System</p>
           </span></p>
@@ -95,7 +99,7 @@ def Macularin_Series(expression, function_plugin, t_order):
             <a className=" sm:mt-[-110px] bg-slate-900 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-white font-semibold h-12 px-10  rounded-lg sm:w-[400px]  no_wrap flex items-center justify-center sm:w-auto dark:bg-slate-950 dark:highlight-white/20 hover:bg-slate-950" href="/docs/installation">
               Get started With Engpy
             </a>
-            {/* <button type="button" className="hidden sm:flex items-center w-72 text-left space-x-3 px-4 h-12 bg-white ring-1 ring-slate-900/10 hover:ring-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 shadow-sm rounded-lg text-slate-400 dark:bg-slate-800 dark:ring-0 dark:text-slate-300 dark:highlight-white/5 dark:hover:bg-slate-700">
+            {/* <button type="button" className="hidden sm:flex items-center w-72 text-left space-x-3 px-4 h-12 bg-white ring-1 ring-slate-900/10 hover:ring-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 shadow-sm rounded-lg text-slate-400 dark:dark:bg-slate-800 dark:bg-purple-500 dark:ring-0 dark:text-slate-300 dark:highlight-white/5 dark:hover:bg-slate-700">
               <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="flex-none text-slate-300 dark:text-slate-400" aria-hidden="true">
                 <path d="m19 19-3.5-3.5"></path>
                 <circle cx="11" cy="11" r="6"></circle>
@@ -341,7 +345,7 @@ def Macularin_Series(expression, function_plugin, t_order):
         </div>
       </div>
 
-      <div className='mt-10 w-full bg-slate-900  '>
+      <div className='mt-10 w-full dark:bg-slate-900 badge '>
         <h1 className='text-center text-slate-100 font-bold text-[50px]'> Here Is Our Vast Class Component </h1>
         <div className='flex justify-center  text-center'>
           <div className='mt-[50px]  text-center items-center justify-center '>

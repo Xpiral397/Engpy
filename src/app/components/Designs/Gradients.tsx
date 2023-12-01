@@ -1,5 +1,5 @@
 import React from 'react'
-import '@/styles/globals.css';
+import '@/styles/globals.scss';
 
 export default function LineGradient({h}: {h: Number | String}) {
     return (

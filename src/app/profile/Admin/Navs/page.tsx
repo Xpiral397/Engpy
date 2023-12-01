@@ -16,7 +16,7 @@ export function AdminNavs({user}: {user: any}) {
 
 
     return (<div>
-        <nav className='z-3 w-full text-white display flex bg-zinc-800 border-b-[.1px] py-2  border-zinc-700 justify-between px-2 '>
+        <nav className='z-10 w-full text-white display flex bg-zinc-800 border-b-[.1px] py-2  border-zinc-700 justify-between px-2 '>
             <div className="flex w-full space-x-5 lg:space-x-10">
                 <div className=''>
                     <div className="flex">
@@ -76,7 +76,7 @@ export function AdminService(user: any) {
                     <li className="text-[13px] hover:font-medium  text-center flex space-x-2  hover:border-b-[2px]  border-purple-900 px-2  "> <span className="no_wrap py-2  text-white">Overview </span></li>
                     <li className="text-[13px]  hover:font-medium  text-center flex space-x-2 hover:border-b-[2px]  border-purple-900 px-2  "> <span className="no_wrap py-2  text-white">Switch</span></li>
                     <li className="text-[13px]  hover:font-medium  text-center flex space-x-2 hover:border-b-[2px]  border-purple-900 px-2  "> <span className="no_wrap py-2  text-white">Report</span></li>
-                    <li className="text-[13px]   hover:font-medium  text-center flex space-x-2 hover:border-b-[2px]  border-purple-900 px-2  "> <span className="no_wrap py-2 text-white">Documentation</span></li>
+                    <li className="text-[13px]   hover:font-medium  text-center flex space-x-2 hover:border-b-[2px]  border-purple-900 px-2  "> <a className="no_wrap py-2 text-white" href='http://localhost:3000/docs'>Documentation</a></li>
                 </ul>
             </div>
         </div>

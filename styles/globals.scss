@@ -1,21 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-
 
 /*
   Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them!
 */
 
+.badge {
+    @apply mt-2 bg-purple-500 text-purple-500;
+}
+
 .border_s {
     border: gray 1px solid;
-
-
-
 }
 
 .c_p {
@@ -36,7 +33,6 @@
         transform: translateX(-100);
         transition: 3s;
     }
-
     100% {
         transform: translateX(0);
         transition: 3s;
@@ -47,14 +43,12 @@
     resize: vertical;
 }
 
-
 .grids {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     overflow-x: scroll;
-
     @media only screen and (max-width: 900px) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -62,7 +56,6 @@
         grid-row-gap: 20px;
         overflow-x: scroll;
     }
-
     @media only screen and (max-width: 630px) {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -70,7 +63,6 @@
         grid-row-gap: 80px;
         overflow-x: scroll;
     }
-
     @media only screen and (min-width: 1800px) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -78,9 +70,7 @@
         overflow-x: scroll;
         grid-row-gap: 20px;
     }
-
     ;
-
 }
 
 .mains {
@@ -119,7 +109,6 @@
         margin-left: 0;
         margin-top: 0;
     }
-
     to {
         margin-left: -40px;
         margin-top: -50px;
@@ -132,7 +121,6 @@
         opacity: 0;
         transition: .51s;
     }
-
     to {
         opacity: 1;
     }
@@ -155,7 +143,9 @@
     /* Hide the scrollbar in IE/Edge */
 }
 
+
 /* Hide the scrollbar thumb and track in WebKit-based browsers */
+
 .hs::-webkit-scrollbar {
     width: 8px;
     /* Set a smaller width for the scrollbar track (adjust as needed) */
@@ -178,8 +168,6 @@
     /* Set a border radius for the thumb */
 }
 
-
-
 .hs-s {
     overflow-y: scroll;
     /* Set 'scroll' to enable the scrollbar */
@@ -189,7 +177,9 @@
     /* Hide the scrollbar in IE/Edge */
 }
 
+
 /* Hide the scrollbar thumb and track in WebKit-based browsers */
+
 .hs-s::-webkit-scrollbar {
     width: 5px;
     /* Set a smaller width for the scrollbar track (adjust as needed) */
@@ -197,7 +187,7 @@
 
 .hs-s::-webkit-scrollbar-track-piece {
     display: block;
-    background: rgb(8, 5, 30)
+    background: transparent
 }
 
 .hs-s::-webkit-scrollbar-corner {
@@ -213,20 +203,68 @@
 }
 
 .hs-s:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(151, 151, 151, 0);
+    /* Hide the scrollbar thumb */
+    border-radius: 4px;
+    /* Set a border radius for the thumb */
+}
+
+.hs-v::-webkit-scrollbar {
+    width: 2px;
+    /* Set a smaller width for the scrollbar track (adjust as needed) */
+}
+
+.hs-h::-webkit-scrollbar-track-piece {
+    display: block;
+    background: rgb(15, 23, 43)
+}
+
+.hs-h::-webkit-scrollbar-corner {
+    display: none;
+    background: transparent;
+}
+
+.hs-h::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    /* Hide the scrollbar thumb */
+    border-radius: 3px;
+    /* Set a border radius for the thumb */
+}
+
+.hs-h:hover::-webkit-scrollbar-thumb {
     background-color: rgb(151, 151, 151);
     /* Hide the scrollbar thumb */
     border-radius: 4px;
     /* Set a border radius for the thumb */
 }
 
-
-
-
-
-
 .hs-none::-webkit-scrollbar {
-    width: 5px;
+    width: 10px;
     /* Set a smaller width for the scrollbar track (adjust as needed) */
+}
+
+.hs-w::-webkit-scrollbar-track-piece {
+    display: block;
+    background: rgb(255, 255, 255)
+}
+
+.hs-w::-webkit-scrollbar-corner {
+    display: none;
+    background: transparent;
+}
+
+.hs-w::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    /* Hide the scrollbar thumb */
+    border-radius: 3px;
+    /* Set a border radius for the thumb */
+}
+
+.hs-w:hover::-webkit-scrollbar-thumb {
+    background-color: rgb(107, 63, 168);
+    /* Hide the scrollbar thumb */
+    border-radius: 4px;
+    /* Set a border radius for the thumb */
 }
 
 .hs-none::-webkit-scrollbar-track-piece {
@@ -240,8 +278,7 @@
 }
 
 .hs-none::-webkit-scrollbar-thumb {
-    background-color: rgb(255, 255, 255);
-    /* Hide the scrollbar thumb */
+    background-color: transparent;
     border-radius: 4px;
     /* Set a border radius for the thumb */
 }
@@ -258,7 +295,6 @@
         margin-left: 0;
         margin-top: 0;
     }
-
     to {
         margin-right: -40px;
         margin-top: -50px;
@@ -273,7 +309,6 @@
     select {
         @apply border-slate-300 border
     }
-
     input[type='text'],
     input[type='number'],
     input[type='password'] {
@@ -331,11 +366,7 @@
 
 .p_c {
     color: rgb(7, 45, 37);
-    font-family: "Euclid Circular A",
-        "Helvetica Neue",
-        Helvetica,
-        Arial,
-        sans-serif;
+    font-family: "Euclid Circular A", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .b_g_s {
@@ -408,7 +439,6 @@
     from {
         transform: rotate(0deg);
     }
-
     to {
         transform: rotate(360deg);
     }
@@ -422,7 +452,6 @@
     background: radial-gradient(circle, rgb(243, 243, 245) 0%, rgb(245, 245, 247) 70%, rgb(255, 255, 255) 70%, rgb(255, 255, 255) 70%, rgb(255, 255, 255) 70%, rgb(255, 255, 255) 100%);
     width: 100%;
     height: 100%;
-
 }
 
 .main:before {

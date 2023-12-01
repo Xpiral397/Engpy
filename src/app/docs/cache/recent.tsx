@@ -8,7 +8,6 @@ export interface RecentActivity {
 }
 
 export const Recent = createContext<RecentActivity | undefined>(undefined)
-
 export function useRecentLink() {
     const context = useContext(Recent)
     if(context === undefined) {
